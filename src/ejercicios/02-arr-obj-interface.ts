@@ -23,3 +23,4 @@ const personaje: Personaje = {
 
 personaje.puebloNatal = 'Pueblo Paleta'
 console.table(personaje);
+
