@@ -38,5 +38,16 @@ const nuevoPersonaje: PersonajeLOR = {
         console.log('Puntos de vida: ', this.pv);
     }
 }
+
+
 curar(nuevoPersonaje, 20)
 nuevoPersonaje.mostrarHp();
+
+// const routers = {
+//     Home: {
+//         name: '',
+//         path: ''
+//     }
+// }
+
+// routers.Home.path
