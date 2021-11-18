@@ -17,21 +17,21 @@
 //     mostrarDireccion: () => string;
 // }
 
-interface SuperHeroe {
-    nombre: string;
-    edad: number;
-    direccion: Direccion, 
-    mostrarDireccion: () => string;
-}
-
-interface Direccion {
+interface IDireccion {
     calle: string;
     pais: string;
     ciudad: string;
 
 }
 
-const superHeroe: SuperHeroe = {
+interface ISuperHeroe {
+    nombre: string;
+    edad: number;
+    direccion: IDireccion, 
+    mostrarDireccion: () => string;
+}
+
+const superHeroe: ISuperHeroe = {
     nombre: 'Spiderman',
     edad: 30,
     direccion: {

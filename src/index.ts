@@ -1,48 +1,38 @@
 
 
-// console.log('Hola Mundo!!!!');
-
-/*
-    ===== Código de TypeScript =====
-*/
-
-// interface SuperHeroe {
-//     nombre: string;
-//     edad: number;
-//     direccion: {
-//     //     calle: string;
-//     //     pais: string;
-//     //     ciudad: string;
-//     // },
-//     mostrarDireccion: () => string;
-// }
-
-interface SuperHeroe {
-    nombre: string;
-    edad: number;
-    direccion: Direccion, 
-    mostrarDireccion: () => string;
-}
-
-interface Direccion {
-    calle: string;
-    pais: string;
-    ciudad: string;
+interface IReproductor {
+    volumen: number;
+    segundo: number;
+    cancion: string;
+    detalles: IDetalles
 
 }
 
-const superHeroe: SuperHeroe = {
-    nombre: 'Spiderman',
-    edad: 30,
-    direccion: {
-        calle: 'Main St',
-        pais: 'USA',
-        ciudad: 'NY'
-    },
-    mostrarDireccion(){
-        return this.nombre + ', ' + this.direccion.ciudad + ', ' + this.direccion.pais;
+interface IDetalles {
+    autor: string;
+    anio: number;
+}
+
+const reproductor: IReproductor = {
+    volumen: 90,
+    segundo: 36,
+    cancion: 'Mess',
+    detalles: {
+        autor: 'Ed Sheeran',
+        anio: 2015
     }
 }
 
-const direccion = superHeroe.mostrarDireccion();
-console.log(direccion);
+// const { volumen, segundo, cancion, detalles: { autor }, detalles: {anio} } = reproductor;
+const { volumen, segundo, cancion, detalles } = reproductor;
+const { autor } = detalles;
+const { anio } = detalles;
+
+
+
+
+console.log(`El volumen actual de: ${volumen}`);
+console.log(`El segundo actual de: ${segundo}`);
+console.log(`La canción actual de: ${cancion}`);
+console.log(`El autor es: ${autor}`);
+console.log(`El año es: ${anio}`)
