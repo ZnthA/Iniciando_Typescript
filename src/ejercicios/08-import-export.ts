@@ -1,4 +1,4 @@
-import { IProducto, calculaISV } from './ejercicios/07-desestructuracion-funcion';
+import { IProducto, calculaISV } from './07-desestructuracion-funcion';
 
 
 const carritoCompras: IProducto [] = [
